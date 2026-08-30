@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🌤️ Weather Dashboard</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search city..."
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- Current Weather Section -->
+            <div class="current-weather">
+                <div id="currentWeatherCard" class="weather-card loading">
+                    <div class="loading-spinner"></div>
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <!-- Forecast Section -->
+            <div class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div id="forecastContainer" class="forecast-grid">
+                    <!-- Forecast cards will be populated here -->
+                </div>
+            </div>
+
+            <!-- Additional Details Section -->
+            <div class="details-section">
+                <h2>Additional Details</h2>
+                <div id="detailsContainer" class="details-grid">
+                    <!-- Details will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap API</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
